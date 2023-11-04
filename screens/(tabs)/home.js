@@ -49,7 +49,7 @@ const Home = () => {
 
   return(
     <NativeBaseProvider>
-      <ScrollView mx={21} my={12}>
+      <ScrollView mx={14} mt={12} scrollIndicatorInsets={false}>
         <Flex direction="row" alignItems={"center"}>
         <Image size={"64px"} borderRadius={100} source={require('../../assets/brody.png')}
           alt="hitam" /> 
