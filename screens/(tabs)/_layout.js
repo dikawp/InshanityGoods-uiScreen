@@ -42,7 +42,7 @@ const Tabs = () => {
         tabBarIconStyle: { marginTop: 5 },
         tabBarStyle: {
           height: 70,
-          backgroundColor: '#FEFFC1',
+          backgroundColor: '#FFFFE7',
           paddingBottom: 5,
         },
         tabBarLabel: ({ children, color, focused }) => {
