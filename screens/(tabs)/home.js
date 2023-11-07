@@ -1,4 +1,3 @@
-// import { useNavigation } from "@react-navigation/native";
 import { useEffect, useState } from "react";
 import {
   Input,
