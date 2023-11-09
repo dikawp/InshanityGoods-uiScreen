@@ -12,6 +12,7 @@ const CategoryButton = (props) => {
       px={5} 
       textAlign={'Center'}
       borderRadius={10}
+      shadow={3}
       >
         <Center>
             <Text color={'white'} fontWeight={400} fontSize={18}>

@@ -24,36 +24,33 @@ const Home = () => {
     setActiveCategory(categoryName);
   };
 
-  const getItems = (activeCategory) => {
-    const getItems = items.find((item) => item.kategori === activeCategory);
-
-    if (getItems) {
-      return getItems.items;
-    } else {
-      return null;
-    }
-  };
-
   useEffect(() => {
-    setProducts(getItems(activeCategory));
-  });
+    const filteredItems = items
+      .filter((product) => product.kategori === activeCategory)
+      .flatMap((category) => category.items);
+
+    setProducts(filteredItems);
+  }, [activeCategory]);
 
   console.log(Products);
 
   return (
-    <ScrollView mx={14} mt={12} showsVerticalScrollIndicator={false}>
-      <Flex direction="row" alignItems={"center"}>
+    <ScrollView mx={14} mt={20} showsVerticalScrollIndicator={false}>
+      <Flex direction="row" alignItems={"center"} justifyContent={'space-between'}>
+        <Box>
+          <Text fontSize={24}>
+            Hi Brody,
+          </Text>
+          <Text fontSize={18}>
+            Welcome back
+          </Text>
+        </Box>
         <Image
           size={"64px"}
           borderRadius={100}
-          source={require("../../assets/brody.png")}
+          source={require("../../images/brody.png")}
           alt="hitam"
         />
-        <Box alignItems={"center"}>
-          <Text marginLeft={5} fontSize={24}>
-            Hi, Brody
-          </Text>
-        </Box>
       </Flex>
       <Input
         placeholder=" Search Product"
@@ -69,7 +66,7 @@ const Home = () => {
           height={150}
           width="100%"
           mt={30}
-          source={require("../../assets/promo_poster.png")}
+          source={require("../../images/promo_poster.png")}
           alt="diskon"
         />
       </TouchableOpacity>
@@ -77,8 +74,8 @@ const Home = () => {
       <Categories onChange={categoriesHandler} />
 
       <HStack flexWrap={"wrap"} justifyContent={"space-between"}>
-        {Products.map((item) => {
-          return <ProductItem item={item} key={item.id} />;
+        {Products.map((product) => {
+          return <ProductItem item={product} key={product.id} />;
         })}
       </HStack>
     </ScrollView>

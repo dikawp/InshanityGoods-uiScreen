@@ -1,7 +1,5 @@
 import React from 'react';
-import { Text } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { NavigationContainer } from '@react-navigation/native';
 import Ionicons from "@expo/vector-icons/Ionicons";
 import Home from "../(tabs)/home";
 import Inspiration from "../(tabs)/inspiration";
@@ -39,19 +37,12 @@ const Tabs = () => {
             />
           );
         },
-        tabBarIconStyle: { marginTop: 5 },
         tabBarStyle: {
           height: 70,
           backgroundColor: '#FFFFE7',
-          paddingBottom: 5,
+          // margin: 20 ,
         },
-        tabBarLabel: ({ children, color, focused }) => {
-          return (
-            <Text color={focused ? "#89580A" : color} mb={2}>
-              {children}
-            </Text>
-          );
-        },
+        tabBarShowLabel: false,
       })}>
         <Tab.Screen name="Home" component={Home} options={noHead} />
         <Tab.Screen name="Inspiration" component={Inspiration} options={noHead}/>

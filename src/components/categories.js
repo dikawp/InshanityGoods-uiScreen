@@ -34,7 +34,7 @@ const Categories = ({ onChange }) => {
             return (
               <CategoryButton
                 title={item.kategori}
-                isFirst={index == 0 ? true : false}
+                // isFirst={index == 0 ? true : false}
                 isActive={index == activeCategory}
                 onPress={() => categoryButtonHandler(index)}
                 key={index}
