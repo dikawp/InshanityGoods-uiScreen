@@ -1,5 +1,4 @@
 import {
-  NativeBaseProvider,
   View,
   Text,
   VStack,
@@ -13,7 +12,6 @@ import SignButton from "../components/sign-button";
 function Register() {
 
   return (
-    <NativeBaseProvider>
       <View mx={14} my={20}>
         <Text fontSize={"32px"}>Sign Up</Text>
         <Text fontSize={"18px"}>Create Your Account</Text>
@@ -42,7 +40,6 @@ function Register() {
           </TouchableOpacity>
         </Center>
       </View>
-    </NativeBaseProvider>
   );
 }
 

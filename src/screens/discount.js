@@ -1,37 +1,16 @@
-// import { useNavigation } from "@react-navigation/native";
-// import { Heading, Center, NativeBaseProvider } from "native-base";
-
-// const Discount = () => {
-//   const navigation = useNavigation();
-
-//   return(
-//     <NativeBaseProvider>
-//       <Center flex={1}>
-//         <Heading>Discount</Heading>
-//       </Center>
-//     </NativeBaseProvider>
-//   )
-// }
-// export default Discount;
-
 import { useEffect, useState } from "react";
 import {
-  Input,
   HStack,
   ScrollView,
   Image,
-  Flex,
-  Box,
-  Text,
   Heading,
   Center,
 } from "native-base";
 import { TouchableOpacity } from "react-native";
 import items from "../dummy/furniture";
 import ProductItem from "../components/product-Item";
-import { useNavigation } from "@react-navigation/native";
 
-const Home = () => {
+const Discount = () => {
   const activeCategory = "All";
   const [Products, setProducts] = useState([]);
 
@@ -72,4 +51,4 @@ const Home = () => {
     </ScrollView>
   );
 };
-export default Home;
+export default Discount;
